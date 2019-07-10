@@ -9,16 +9,16 @@ def get_version():
         return re.match(r".*__version__ = '(.*?)'", fp.read(), re.S).group(1)
 
 setup(
-    name='django-pgcrypto',
+    name='django-pgcrypto2',
     version=get_version(),
     description='Python and Django utilities for encrypted fields using pgcrypto.',
-    author='Dan Watson',
+    author='Dan Watson & Fran Lendinez',
     author_email='dcwatson@gmail.com',
     url='https://github.com/dcwatson/django-pgcrypto',
     license='BSD',
     packages=find_packages(),
     install_requires=[
-        'pycrypto>=2.6',
+        'pycryptodome==3.8.2',
     ],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
